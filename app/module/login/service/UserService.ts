@@ -7,6 +7,7 @@ import { SingletonProto, AccessLevel, Inject } from '@eggjs/tegg';
     // 如果需要在上层使用，需要把 accessLevel 显示声明为 public
     accessLevel: AccessLevel.PUBLIC,
 })
+
 export class UserService {
     // 注入一个 logger
     @Inject()
