@@ -1,0 +1,61 @@
+{
+  "name": "urban-backend",
+  "version": "1.0.0",
+  "description": "back end",
+  "private": true,
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-urban-backend",
+    "stop": "egg-scripts stop --title=egg-server-urban-backend",
+    "dev": "egg-bin dev",
+    "test-local": "egg-bin test -p",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov -p",
+    "ci": "npm run lint && npm run cov && npm run tsc && npm run clean",
+    "lint": "eslint . --ext .ts --cache",
+    "tsc": "tsc",
+    "clean": "tsc -b --clean"
+  },
+  "dependencies": {
+    "@eggjs/tegg": "^3.5.2",
+    "@eggjs/tegg-aop-plugin": "^3.5.2",
+    "@eggjs/tegg-config": "^3.2.3",
+    "@eggjs/tegg-controller-plugin": "^3.5.2",
+    "@eggjs/tegg-eventbus-plugin": "^3.5.2",
+    "@eggjs/tegg-plugin": "^3.5.2",
+    "@eggjs/tegg-schedule-plugin": "^3.5.2",
+    "bcrypt": "^5.1.0",
+    "egg": "^3.15.0",
+    "egg-cors": "^2.2.3",
+    "egg-scripts": "^2.17.0",
+    "egg-tracer": "^2.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.11.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mocha": "10",
+    "@types/node": "18",
+    "@types/pg": "^8.10.2",
+    "@types/uuid": "^9.0.2",
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "12",
+    "typescript": "4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "japycer",
+  "license": "MIT"
+}

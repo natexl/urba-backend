@@ -1,0 +1,17 @@
+### 测试注册接口
+POST http://localhost:7001/user/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "123456"
+}
+
+### 测试登录接口
+POST http://localhost:7001/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "123456"
+}
